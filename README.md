@@ -1,2 +1,2 @@
 # ideal-octo-computing-machine
-django + mongodb
+python + mongodb - pymongo
