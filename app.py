@@ -15,10 +15,22 @@ cluster = MongoClient(connection)
 db = cluster["test"]
 collection = db['test']
 
+# with id
 post = {
     "_id": 1,
-    "name": "Jim",
-    "score": 8
+    "name": "Wim",
+    "score": 19
 }
+# collection.insert_one(post)
 
-collection.insert_one(post)
+# without id, and it will auto generated
+post = {
+    "name": "Mark",
+    "score": 3
+}
+# collection.insert_one(post)
+
+# multiple insert
+post1 = {"name": "Sam"}
+post2 = {"name": "Luna"}
+# collection.insert_many([post1, post2])
