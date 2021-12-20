@@ -34,3 +34,9 @@ post = {
 post1 = {"name": "Sam"}
 post2 = {"name": "Luna"}
 # collection.insert_many([post1, post2])
+
+results = collection.find({"name": "Sam"})
+
+for r in results:
+    print(r)
+    print(r['_id'])
