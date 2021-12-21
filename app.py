@@ -35,8 +35,23 @@ post1 = {"name": "Sam"}
 post2 = {"name": "Luna"}
 # collection.insert_many([post1, post2])
 
-results = collection.find({"name": "Sam"})
+# get all
+results = collection.find()  # more expressions https://pymongo.readthedocs.io/en/stable/tutorial.html#
 
+print('find: get all')
 for r in results:
     print(r)
     print(r['_id'])
+
+# get by certain name
+results = collection.find({"name": "Mark"})
+
+
+print('-----------\nfind')
+for r in results:
+    print(r)
+    print(r['_id'])
+
+result = collection.find_one({"name": "Mark"})
+
+print('-----------\nfind_one:', result)
