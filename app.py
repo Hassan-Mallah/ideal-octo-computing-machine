@@ -39,19 +39,23 @@ post2 = {"name": "Luna"}
 results = collection.find()  # more expressions https://pymongo.readthedocs.io/en/stable/tutorial.html#
 
 print('find: get all')
-for r in results:
-    print(r)
-    print(r['_id'])
+# for r in results:
+#     print(r)
+#     print(r['_id'])
 
 # get by certain name
 results = collection.find({"name": "Mark"})
 
 
 print('-----------\nfind')
-for r in results:
-    print(r)
-    print(r['_id'])
+# for r in results:
+#     print(r)
+#     print(r['_id'])
 
-result = collection.find_one({"name": "Mark"})
+result = collection.find_one({"_id": 1})
 
 print('-----------\nfind_one:', result)
+
+print('\ndelete:')
+result = collection.delete_one({"_id": 1})
+
