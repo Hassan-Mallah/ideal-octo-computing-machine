@@ -63,3 +63,7 @@ print('\ndelete:')
 
 # delete many
 # collection.delete_many({"name": "Sam"})
+
+# delete all
+print('\ndelete all:')
+collection.delete_many({})
