@@ -62,8 +62,12 @@ print('\ndelete:')
 
 
 # delete many
+print('\ndelete many:')
 # collection.delete_many({"name": "Sam"})
 
 # delete all
 print('\ndelete all:')
-collection.delete_many({})
+# collection.delete_many({})
+
+# update one
+print('\nupdate one:')
