@@ -70,4 +70,7 @@ print('\ndelete all:')
 # collection.delete_many({})
 
 # update one
+# update operator: https://docs.mongodb.com/manual/reference/operator/update/
 print('\nupdate one:')
+
+# collection.update_one({'name': 'Sam'}, {'$set': {'name': 'Sam2'}})
