@@ -74,3 +74,5 @@ print('\ndelete all:')
 print('\nupdate one:')
 
 # collection.update_one({'name': 'Sam'}, {'$set': {'name': 'Sam2'}})
+
+# collection.update_one({'name': 'Luna'}, {'$set': {'counter': 0}})  # adds a new field
