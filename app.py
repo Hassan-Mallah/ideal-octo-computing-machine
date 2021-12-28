@@ -2,7 +2,6 @@ import pymongo
 from pymongo import MongoClient
 import environ  # for .env
 
-
 env = environ.Env()
 # reading .env file
 environ.Env.read_env()
@@ -10,7 +9,8 @@ environ.Env.read_env()
 username = env('username')
 password = env('password')
 
-connection = 'mongodb+srv://{}:{}@cluster0.rthfj.mongodb.net/test?retryWrites=true&w=majority'.format(username, password)
+connection = 'mongodb+srv://{}:{}@cluster0.rthfj.mongodb.net/test?retryWrites=true&w=majority'.format(username,
+                                                                                                      password)
 cluster = MongoClient(connection)
 db = cluster["test"]
 collection = db['test']
@@ -46,7 +46,6 @@ for r in results:
 # get by certain name
 results = collection.find({"name": "Mark"})
 
-
 print('-----------\nfind')
 # for r in results:
 #     print(r)
@@ -76,3 +75,14 @@ print('\nupdate one:')
 # collection.update_one({'name': 'Sam'}, {'$set': {'name': 'Sam2'}})
 
 # collection.update_one({'name': 'Luna'}, {'$set': {'counter': 0}})  # adds a new field
+
+# update many
+print('\nupdate many')
+
+# collection.update_many({'name': 'Luna'}, {'$inc': {'counter': 1}})  # increase value by 1
+
+
+# count records
+print('\ncount records:')
+post_count = collection.count_documents({})
+print(post_count)
